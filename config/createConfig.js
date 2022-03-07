@@ -459,8 +459,8 @@ module.exports = (
         publicPath: clientPublicPath,
         pathinfo: true,
         libraryTarget: 'var',
-        filename: 'static/js/bundle.js',
-        chunkFilename: 'static/js/[name].chunk.js',
+        filename: 'marine-new/static/js/bundle.js',
+        chunkFilename: 'marine-new/static/js/[name].chunk.js',
         devtoolModuleFilenameTemplate: info =>
           path.resolve(info.resourcePath).replace(/\\/g, '/'),
       };
@@ -531,8 +531,8 @@ module.exports = (
       config.output = {
         path: paths.appBuildPublic,
         publicPath: dotenv.raw.PUBLIC_PATH || '/',
-        filename: 'static/js/bundle.[chunkhash:8].js',
-        chunkFilename: 'static/js/[name].[chunkhash:8].chunk.js',
+        filename: 'marine-new/static/js/bundle.[chunkhash:8].js',
+        chunkFilename: 'marine-new/static/js/[name].[chunkhash:8].chunk.js',
         libraryTarget: 'var',
       };
 
@@ -542,8 +542,8 @@ module.exports = (
         new webpack.DefinePlugin(dotenv.stringified),
         // Extract our CSS into files.
         new MiniCssExtractPlugin({
-          filename: 'static/css/bundle.[contenthash:8].css',
-          chunkFilename: 'static/css/[name].[contenthash:8].chunk.css',
+          filename: 'marine-new/static/css/bundle.[contenthash:8].css',
+          chunkFilename: 'marine-new/static/css/[name].[contenthash:8].chunk.css',
         }),
         new webpack.HashedModuleIdsPlugin(),
         new webpack.optimize.AggressiveMergingPlugin(),
